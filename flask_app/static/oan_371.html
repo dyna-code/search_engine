@@ -1,0 +1,812 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+
+    
+    
+
+    
+    
+
+    <HEAD>
+
+        
+        <link rel="icon" type="image/png" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/favicon.ico" />
+
+        
+        
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="/herring/css/rcss/base.css" type="text/css" />
+
+
+<link rel="stylesheet" media="all" href="/herring/css/fonts/iconFonts.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.min.css" />
+<link rel="stylesheet" href="/herring/css/slick.css" type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+<script type="text/javascript" src="/herring/js/PROD/modernizr.custom.17405.js" ></script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+
+
+
+<script type="text/javascript" src="/dwr/engine.js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="text/javascript" src="/dwr/interface/AJAXBEE.js"></script>
+<script type="text/javascript" src="/dwr/interface/AJAXSESS.js"></script>
+<script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.all.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0FNFZQF1X"></script>
+<script src="/herring/js/PROD/analyticsv2-min.js"></script>
+
+<!-- OpenBook -->
+<script src="https://stream.aidemsrv.com/lib/stream.js" data-key="clnabfeym018j08mgcv8zfkrd" data-init-only="false" defer></script>
+<script>
+  window.aidemstream = window.aidemstream || (function(){(window.aidemstreamQ = window.aidemstreamQ || []).push(arguments);})
+</script>
+
+
+<script type="text/javascript">
+
+
+
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"enableCcpa":true,"countryDetection":true,"ccpaAcknowledgeOnDisplay":false,"whitelabel":false,"enableGdpr": true,"gdprAppliesGlobally":false,"lang":"en","siteId":2150021,"cookiePolicyId":14516423, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#ee9b25","acceptButtonCaptionColor":"white","customizeButtonColor":"#212121","customizeButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","position":"float-bottom-center","textColor":"white","backgroundColor":"#000001" },
+        "callback" : {
+            "onConsentFirstGiven": function(consent){
+                var now = new Date();
+                var time = now.getTime();
+                var days = 365;
+                var expireTime = time +(days*1000*24*60*60);
+                now.setTime(expireTime);
+                document.cookie = 'kconsentaccepteddate=' + time +';expires='+now.toUTCString()+';path=/';
+            }
+        }
+    };
+</script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+<script>
+
+
+jwplayer.key="xj1hV5VsEvDGah84oQxgewtJ/m0RJdKiOQTKFa5GdB8=";
+</script>
+
+<script type="text/javascript">
+    function onSubmitSignup(token){
+        //document.getElementById("formEmailCredentials").submit();
+        document.getElementById("formAccountCreate").submit();
+        console.log(token);
+    }
+
+    function onSubmitLogin(token){
+        document.getElementById("formLogIn").submit();
+        console.log(token);
+    }
+
+
+    function paymentSubmit(){
+        var $forms = $('form#formPayment');
+        $forms.off("submit.submitting");
+        $forms.removeClass("submitting");
+
+        // Reset buttons
+        var $formButtons = $forms.find("button");
+        if($formButtons.length > 0) {
+            $formButtons.removeAttr("disabled");
+            $formButtons.remove("span.submitting");
+        }
+
+        // Set submit function --- to show user something is happening on submit
+        $forms.on("submit.submitting", function(e){
+
+            var className = "submitting";
+            var $thisForm = $(this);
+
+            // do not submit again if form is already submitting
+            if($thisForm.hasClass(className)) {
+
+                return false;
+            }
+            else {
+
+                var $buttons = $thisForm.find("button");
+                if($buttons.length > 0) {
+                    $buttons.attr("disabled", "disabled");//&#x2601;
+                    $buttons.prepend("<span class='submitting'><i class='icon-cloud'></i></span>");
+                }
+
+                $thisForm.addClass(className);
+
+                return true;
+            }
+        });
+
+
+
+
+        document.getElementById("formPayment").submit();
+        console.log("Testing");
+    }
+
+
+
+
+
+
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7DFL67');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFMDCPL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '990276938526275');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=990276938526275&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<title>Terms | OAN Live</title>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logo/apple-icon-logo.png" />
+
+    </HEAD>
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+	
+	
+	
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    <body  class="" data-responsejs='{"create": [{"prop":"width","prefix":"r","breakpoints":[0, 320, 480, 560, 672, 768, 864, 960, 1024, 1200, 1440]}]}' data-ktv="" data-eip="true" >
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        
+        
+        
+
+
+
+
+        
+        
+        
+
+
+
+
+        <div id="container-page">
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div id="header-container" class="clear clearfix relief">
+    <div class="container-section">
+        <div id="head-home" class="float-left">
+            <div class="display-flex align-center">
+                <button class="display-inline-block hamburger js-hamburger" type="menu" title="Menu" data-hamburger-movecontent="y" data-hamburger-of="hamburger-menu-main">
+                    <span class="icon uppercase display-block size-smallest">Menu</span>
+                </button>
+                <a href="/home.ktv" class="display-inline-block size-large "><img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-logo.svg" alt="Oan Live Home" height="50"  class="display-inline-block" /><!--
+                    --></a>
+
+                
+                
+                    
+                
+                
+            </div>
+        </div>
+        <div id="head-sub" class="float-right is-hiddenb-pre-ml">
+            
+                
+                
+
+                    
+                    
+                        
+                           
+                        
+                        
+                    
+
+                    
+                    
+                        <a href="/join/credentials/email.ktv?" class=" display-inline-block size-large box-g-t-a" data-mp='{"page":"#body #create-account-stepone-container"}' >
+                            <span class="display-inline-block size-medium">Join</span>
+                        </a>
+                    
+
+                    
+                    
+                        <a href="/login.ktv" class="display-inline-block size-large box-g-t-a"><span class="display-inline-block size-medium">Log in</span></a>
+                    
+                    <a href="/join/signup.ktv" id="join-button" class="is-hiddenid-pre-s display-inline-block button-cta"  data-mp='{"page":"#body #create-account-stepone-container"}' >
+                        <span class="display-inline-block size-medium">Sign Up For OAN Live</span>
+                    </a>
+
+                
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="hamburger-menu-main" class="clearfix clear paint-white relief hamburger-menu-left">
+    <ul>
+        
+        <li>
+            <a href="/home.ktv" class="box-w-t-a display-block width-max">OAN Live</a>
+        </li>
+        
+            
+            
+                <li>
+                    <a href="/join/credentials/email.ktv?" data-mp='{"page":"#body #create-account-stepone-container"}' class=" box-w-t-a display-block width-max" >Join</a>
+                </li>
+                <li>
+                    <a href="/login.ktv" class="box-w-t-a display-block width-max">Log in</a>
+                </li>
+            
+        
+        <li>
+            
+        </li>
+        <li>
+           
+        </li>
+        <li>
+            <a href="/support/faq.ktv" class="box-w-t-a display-block width-max">FAQ & Support</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+            
+
+
+            <div id="container-body" >
+
+
+                
+                
+                
+                    
+
+
+
+
+
+
+
+<div class="block paint-light-grey clearfix clear" >
+    <div class="content">
+        <h1>OAN Live Terms of Use</h1>
+        <div class="block reliefit paint-white">
+            <h3>Brief Overview</h3>
+            <p>We are delighted that you have decided to join us at OAN Live! Our goal is to provide you with a subscription service that gives you access to live streaming television channels ("TV Channels"), which are streamed over the Internet to the Internet-connected devices of our subscribers ("OAN Live Devices").</p>
+            <p>With use of OAN Live Services, you explicitly agree to the Arbitration Agreement and class action waiver delineated in Section 8 to resolve any disputes with OAN Live, unless otherwise provided for in Section 8.</p>
+            <ol class="numbered-list margin-bottom margin-top">
+                <li class="margin-bottom">
+                    <h3>
+                        Acceptance of Terms of Use and Description of Service
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            Herring Networks, a San Diego based company, doing business as OAN Live ("OAN Live", "we", or "us") provides an online streaming video service for finding and watching TV Channels, clips, and other content (collectively, the "Content") to those who use our services ("Subscriber"). The video service, the Content, and any feature, user interface, application, video player, or any other services offered by OAN Live in connection with its business activities are referred to collectively as the OAN Live Services.
+                        </li>
+                        <li>
+                            The Content is available for permissible viewing through the following delivery vehicles ("Delivery Vehicles").
+                            <ol class="roman-list">
+                                <li>
+                                    The OAN Live.com website (the "OAN Live site")
+                                </li>
+                                <li>
+                                    OAN Live authorized applications, features, or devices, accessed via a Video Player.
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            This Terms of Use is place to govern your use of the OAN Live Services, including access to the Content through the Delivery Vehicles.
+                        </li>
+                        <li>
+                            By visiting the OAN Live site or using any of the OAN Live services (including any access to the Content) you are agreeing to these Terms of Use.
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        Use and Access of the OAN Live Services
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            <span class="text-weight-bold">Age Limitations.</span> The minimum age to be a member of the OAN Live Service is 18 years of age, or the age of majority in your province, territory, or country. Individuals under the age of 18, or applicable age of majority, may utilize the service on OAN Live with the enablement of a parent or legal guardian, under such person's account and otherwise subject to these Terms of Use.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Subscriber License.</span> Subscriber is granted a non-exclusive limited license to use the OAN Live Services on the Delivery Vehicles, which includes accessing and viewing the Content on a streaming-only basis through the Video Player. Subscriber acknowledges that OAN Live owns and retains all rights to OAN Live services, and that any Content accessed is owned or controlled by OAN Live.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Video Player.</span> The modification, removal, interference with, or alteration in any way of the Video Player, its components, digital rights management capability, or any of the features of the Video Player is expressly prohibited. Further, the circumvention, bypass, or disablement of the Video Player is expressly prohibited.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Content.</span> The Content is accessible and viewable solely for personal and non-commercial purposes in compliance with these Terms of Use. The usage of the Content for any other purpose is expressly prohibited. This restriction includes the prohibition of directly, or through the use of any device, third party application, or other means, remove, alter, bypass, interfere with, or circumvent any copyright, trademark, or other proprietary notices marked on the Content or any digital rights management mechanism, device, or other content protection associated with the Content. The use of any means to copy, download, capture, reproduce, duplicate, archive, distribute, upload, publish, modify, translate, broadcast, perform, sell, display, transmit, or retransmit the Content is expressly prohibited. The use of the Content for commercial purposes, regardless of profit or non-profit status, is expressly prohibited.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Derivative Works.</span> The creation of derivative works derived or based on the Content is expressly prohibited, unless expressly permitted by OAN Live in writing.
+                        </li>
+                    
+                        <li>
+                            <span class="text-weight-bold">Your Responsibilities.</span> You agree to observe restrictions stated in Terms of Use regarding OAN Live Services, Content, and all other restrictions herein. You further agree that you will not access OAN Live Services in a way that:
+                            <ol class="roman-list">
+                                <li>
+                                    violates intellectual property rights, including patent, trademark, copyright, and all other laws of intellectual property
+                                </li>
+                                <li>
+                                    interferes with any other party's enjoyment or use of OAN Live Services
+                                </li>
+                                <li>
+                                    introduces computer code, malicious or otherwise to OAN Live Services
+                                </li>
+                                <li>
+                                    overburdens, disables, gains unauthorized access, or otherwise inappropriately uses OAN Live Services, including OAN Live infrastructure
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">OAN Live Discretion.</span> OAN Live retains the right, in its sole discretion, to determine that you are violating any of the Terms of Use herein. We retain the right to notify you and/or use any means available to us to block or restrict your access to OAN Live, including terminating/suspending your account. In either or both cases, you agree to immediately cease such activity in violation of the Terms of Use, and agree not to circumvent measures OAN Live may have taken to prevent such violations.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Discontinuation.</span> OAN Live may, for any reason, suspend - either permanently or temporarily - some or all parts of OAN Live Services, including some or all Content. You acknowledge the OAN Live may do so at its sole discretion, and will not be liable to you for any such a suspension of service. OAN Live may, in its sole discretion, provide you with a credit or discount. No such credit will be offered if your account was suspended or terminated based on a violation of these Terms of Use.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Changes to Terms of Use.</span> OAN Live may change these Terms of Use at any time, which shall take immediate effect.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Communication.</span> You consent to receive email notifications from OAN Live regarding your OAN Live account, including correspondences regarding your payments, changing, and upcoming features on OAN Live. You agree that any notice or document sent electronically to you satisfy legal communications requirements, specifically that such notices be in writing. You also consent to receiving email regarding OAN Live features, promotional material, and customer surveys.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Internet Access Charges.</span> Streaming video requires robust bandwidth. You are responsible for payment and securing sufficient internet bandwidth. You are responsible for paying, including but not limited to, data and connectivity charges, data plans, data overages, internet service provider fees, and any other charges associated with your data use.
+                        </li>
+                        <li>
+                            The availability of Content may change from time to time and from location to location. Not all content is available in HD, and a download speed of at least 5.0 Mbps per stream is recommended to receive HD content, which is defined as 720p or better. A download speed of at least 3.0 Mbps is recommended to receive SD content.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Customer service.</span> If you require assistance, please go to www.OAN Live.com/support/contact.ktv.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Virtual Private Network (VPN)</span>. The use of a VPN may or may not guarantee proper or expected use of OAN Live. OAN Live shall maintain the right to serve or not serve users who use a VPN.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Detecting Abuse</span>. OAN Live shall maintain the right to discontinue users or block requesters that appear to abuse or misuse the OAN Live service.
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        OAN Live Subscriptions
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            <span class="text-weight-bold">Billing.</span> Billing, as used in these Terms of Use, shall indicate either a charge or a debit, as applicable, against your Payment method. Payment Method, as used in these Terms of Use, is a credit card or any other payment method accepted by OAN Live.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Subscription.</span> Subscription, as used in these Terms of Use, shall be defined as cumulative charges accrued through ordering of any OAN Live Services.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Free Trials.</span> Your OAN Live subscription may start with a complimentary free trial. The period of the free trial will last for seven days, or as stated during your signup on the OAN Live.com web properties. Restrictions may apply, if combined with other offers. Free trials are for new members only. OAN Live reserves the right to determine your free trial eligibility, at its sole discretion. We will begin billing your Payment Method for monthly membership fees at the end of the free trial period of your membership unless you unsubscribe prior to the end of the free trial period. You can view specific details on your membership, including your membership price on your Profile page. We may authorize your Payment Method through various methods, including authorizing it up to approximately one month of service as soon as you register. It is possible that your available balance or credit limit may be reduced to reflect the authorization during your free trial period, in some instances. OAN Live may not send you notice of the expiration of your free trial. You may unsubscribe from the service on your Profile page. Until you unsubscribe, we will continue to bill your selected membership price.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Recurring Billing.</span> By starting your OAN Live membership, you agree that we are authorized to charge you a monthly subscription fee at the then current rate, any other fees for additional services you may purchase, and any applicable tax through a credit card or any other payment method accepted by OAN Live. You acknowledge that the amount you are charged each month may change from month to month for reasons that may include, but are not limited to promotional offers, plan pricing changes, and adding or dropping channels or packages, and you authorize us to charge your Payment Method for such varying amounts, which may be billed in one or more amounts, and on the same or different dates. If your credit card or other payment method expires, and you do not update your payment method, you authorize us to continue billing, and you will be responsible for any uncollected amounts. You may modify your payment method by accessing your account information by clicking on "Edit Billing" from the profile page after you have logged into OAN Live.
+                        </li>
+                        <li>
+                            OAN Live will automatically bill your Payment Method on the calendar day corresponding to the beginning of your subscription each month. If you began your Subscription on a day which does not appear in the current month (for example we will bill you on the last day of a month. You acknowledge that your monthly charges may change based upon changes in your subscription plan, promotional plans, or changes in pricing. Changing plans will take immediate effect and OAN Live may prorate these changes and credit, or charge your payment method accordingly. If you add additional packages or channels to your subscription during the month, you will be charged the full month price for that package or channel on the day you add the channel or package regardless of the number of days left in that billing period. Add-on packages or channels added between billing cycles will not be prorated, and no refunds or credits will be issued for such partial month purchases. If OAN Live changes the cost of services, we will post all changes at OAN Live.com.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Month-to-Month Basis.</span> Your service will continue on a month-to-month basis unless you cancel your OAN Live Subscription or the Subscription is suspended or terminated by OAN Live. If you cancel your active Subscription, you will have access to the OAN Live Services authorized by your Subscription until the end of your current monthly period. If you cancel your Subscription during any trial period then your Subscription will end immediately.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Modification of Subscription.</span> If you choose to add a channel, or package of channels, to your Subscription at any point, you will pay the full monthly charge for that channel, regardless of the duration remaining in the monthly billing period. No credit will be carried over into the following monthly billing period. Subsequent monthly billing statements will reflect the additional purchases you have selected in your Subscription. If you choose to delete a channel from your Subscription, you will not be refunded for the remaining duration of the monthly billing period. Subsequent monthly billing statements will reflect the channels you have deleted in your Subscription. If you choose to change subscription plans you will pay or be credited any prorated amount determined by OAN Live.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Unpaid Amounts.</span> OAN Live reserves the right to pursue unpaid amounts. You remain liable for such amounts, and all costs we incur in the pursuit of unpaid amounts.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Time Zone.</span> A "day" begins at 12:00AM and ends at 11:59PM of the same day. OAN Live Offices on the east coast of the United States operates on Eastern Standard Time. The OAN Live offices on the west coast operates in Pacific Standard Time. For billing purposes, OAN Live will operate based on Universal Time Zone. In some cases for billing, the operations may be performed in one of the mentioned office time zones, especially if subscriptions are handled by means other than the provided OAN Live Services.
+                        </li>
+                        <li>
+                            The number of devices on which you may use OAN Live Services may be limited. The number of multiple simultaneous same Subscription usage may be limited.
+                        </li>
+                        <li>
+                            OAN Live is under continual development, which means we are continually testing elements of our service, which can include promotional features, pricing, delivery mechanisms, service levels, our website, and user interface. By agreeing to this Terms of Use, you agree that we may include or exclude you in these tests without notice. We expressly reserve the right in our sole discretion to make modifications and changes, without notice, in the OAN Live services.
+                        </li>
+                        <li>
+                            The OAN Live streaming service is designed and developed for OAN Live, specifically to enable the streaming of OAN Live content through OAN Live ready applications and devices. As each device or application is different, the service may vary by device or application, and functionalities may differ between device or application. By using the OAN Live service, you acknowledge and agree to the Terms of Use defined in this agreement, and to receive updated versions of the OAN Live service. IF YOU DO NOT ACCEPT THE FOREGOING TERMS, DO NOT USE OUR SERVICE. OAN Live does not take responsibility, or warrant the performance, of these devices or applications, including the continuing compatibility of devices or applications with the OAN Live service. By agreeing to these terms, you agree to look solely to the device or application manufacturer of the device of application you are using for any issues related to the device or application and its compatibility with the OAN Live service.
+                        </li>
+                        <li>
+                            Cancellations - You can cancel your OAN Live membership at any time, and you will continue to have access to the OAN Live service through the end of your monthly billing period. To cancel, go to the "Profile" page on our site and follow the steps to cannel your membership. OAN Live DOES NOT ISSUE REFUNDS OR PROVIDE CREDITS FOR ANY PARTIAL MONTH MEMBERSHIP PERIODS. ACCOUNTS ARE NON-TRANSFERABLE AND UNUSED TIME IS NONREDEEMABLE, NONTRANSFERABLE AND NONREFUNDABLE.
+                        </li>
+
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        Registration and Accounts
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            <span class="text-weight-bold">Account Registration.</span> All information you submit to OAN Live must be accurate and updated. Your password should be kept confidential, and OAN Live will never ask for your password.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Use of Account.</span> You are responsible for all use of your account, including unauthorized use by any third party. Please notify us by emailing support@OAN Live.com as soon as you suspect any unauthorized use of your account.
+                        <li>
+                            <span class="text-weight-bold">Termination.</span> You may terminate your account by logging into OAN Live, cancelling your subscription under "Profile", and then selecting "Discontinue". OAN Live retains the right, in its sole discretion, to determine that you are violating any of the Terms of Use herein. We retain the right to notify you and/or use any means available to us to block or restrict your access to OAN Live, including terminating/suspending your account. WE DO NOT PROVIDE REFUNDS OR CREDITS FOR ANY PARTIAL-MONTH MEMBERSHIP PERIODS OR UNWATCHED MOVIES OR TV SHOWS.
+                        </li>
+                        <li>
+                            You can cancel your OAN Live membership at any time, and you will continue to have access to the OAN Live service through the end of your monthly billing period. To cancel, go to the "Profile" page on our site and follow the steps to cannel your membership.
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        Trademarks
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                           OAN Live marks, logos, graphics, sounds, and any other intellectual property of OAN Live may not be copied, downloaded, or otherwise exploited.
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        Disclaimer of Warranties, Limitation of Liability, and Indemnity
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            You agree that use of OAN Live Services is at your own risk. OAN Live Services are provided "as is" and, to the fullest extent permitted by law, are provided without warranties of any kind, express or implied. OAN Live does not make any warranties of fitness for a particular purpose, title, merchantability, completeness, availability, security, compatibility of noninfringement, or that the OAN Live Services will be uninterrupted, free of viruses and other harmful components, accurate, error free, or reliable.
+                        </li>
+                        <li>
+                            In NO EVENT shall OAN Live or its affiliates, successors, assigns, and each of their respective investors, directors, officers, employees, agents, and suppliers (including distributors and content licensors)(collectively the OAN Live Parties) be liable for any direct, indirect, punitive, incidental, special, consequential, or other damages, including loss of profits, arising out of or in any way related to the use of OAN Live Services (including any information, products or services advertised in, obtained on, or provided through the OAN Live Services), whether based in contract, tort, strict liability, or other theory, even if the OAN Live parties have been advised of the possibility of damages. Certain state laws do not allow limitations on implied warranties or the exclusion or limitation of certain damages. If these laws apply to you, some or all of the above disclaimers, exclusions, or limitations may not apply to you. In NO EVENT shall our total liability to you for all damages, losses and causes of action whether in contract, tort (including negligence) or otherwise exceed the amount paid by you to us, if any, for accessing or participating in any activity related to use of the OAN Live Service or $50 (whichever is less).
+                        </li>
+                        <li>
+                            You agree to defend, indemnify, and hold harmless the OAN Live parties from and against any and all liabilities, claims, damages, expenses (including reasonable attorneys fees and costs), and other losses arising out of or in any way related to your breach or alleged breach of these terms or your use of the OAN Live services (including your use of the content). OAN Live reserves the right, at our own expense, to employ separate counsel and assume the exclusive defence and control of any matter otherwise subject to indemnification by you.
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        Copyright Infringement
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            If you believe that any Content or other material provided through the OAN Live service has infringed upon your copyright, you should email support@OAN Live.com with the subject line Copyright Infringement. We will process each notice of alleged infringement that OAN Live receives and take appropriate action in accordance with applicable intellectual property laws.
+                        </li>
+                        <li>
+                            To be effective, the notification must be in writing and contain the following information:
+                            <ol class="roman-list">
+                                <li>
+                                    a signature (electronic or physical) of the person authorized to act on behalf of the owner of an exclusive copyright interest;
+                                </li>
+                                <li>
+                                    a detailed description of the copyrighted work that you claim has been infringed;
+                                </li>
+                                <li>
+                                    a detailed description of where the material that you claim is infringing is located on the OAN Live Services;
+                                </li>
+                                <li>
+                                    your contact information, such as your address, telephone number, and email address;
+                                </li>
+                                <li>
+                                    a statement which details that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and
+                                </li>
+                                <li>
+                                    a statement by you that the above information in your notice is accurate and under penalty of perjury that you are authorized to act on behalf of the copyright owner or the owner of an exclusive right in the material.
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        Legal pursuit of Claims
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            You agree that any claim against OAN Live must be filed within within one year after your claim arose, otherwise your claim is waived.
+                        </li>
+                        <li>
+                            You agree to file any and all claims against OAN Live in your individual capacity, not as a representative or member of a class. Your claims may not be joined with other claims, and your claims may not be filed on a class-action basis. You agree to the Venue of  the available court in Los Angeles, California.
+                        </li>
+                    </ol>
+                </li>
+                <li class="margin-bottom">
+                    <h3>
+                        General Information
+                    </h3>
+                    <ol class="alpha-list">
+                        <li>
+                            <span class="text-weight-bold">Territory of Use.</span> Using technologies to access Content outside of legally approved geographical areas is prohibited. OAN Live will use technologies to determine your location to ensure that Content is authorized for your viewing.
+                        </li>
+                        <li>
+                            These Terms of Use shall be construed in accordance with, and governed by, the laws of the State of California without giving effect to principles of conflicts of law. Further, any claim against OAN Live will be subject to the jurisdiction of the courts located in the State of California, city of Los Angeles.
+                        </li>
+                        <li>
+                            In such an instance that we fail or delay to act against a violation of these Terms of Use, you should not constitute that as a waiver of any such provision of these Terms of Use, nor should you judge any action OAN Live takes (or refrains from taking) against a violation of these Terms of Use as being applicable to any other violation of these Terms of Use.
+                        </li>
+                        <li>
+                            <span class="text-weight-bold">Severability, Amendment, Integration.</span> In such an instance that we fail or delay to act against a violation of these Terms of Use, you should not constitute that as a waiver of any such provision of these Terms of Use, nor should you judge any action OAN Live takes (or refrains from taking) against a violation of these Terms of Use as being applicable to any other violation of these Terms of Use.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+                
+
+
+            </div>
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div class="clear clearfix display-block paint-accent-2">
+<div class="block paint-accent-dark-p5 clearfix clear">
+    <p class="display-block padding-bottom text-center">
+       
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        View our <a href="/sitemap.ktv" class="lg-t-p underline">site map</a>.
+    </p>
+    <p class="color-light-grey size-xsmall">
+        
+        &copy; 2024 OAN Live, an Herring Networks Company.
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        Use of the OAN Live service constitutes an acceptance of the service's <a href="/terms.ktv" class="lg-t-p underline">terms</a> and <a href="/privacy.ktv" class="lg-t-p underline">privacy</a>.
+    </p>
+    <dl class="display-block text-right">
+        <dt class="padding-bottom-half color-light-grey">
+            Questions? Comments?
+        </dt>
+        <dd>
+            <a href="/support/faq.ktv" class="display-inline-block button-ghost-light">FAQ</a>
+            <a href="/support/contact.ktv" class="display-inline-block button-ghost-light">Contact Us</a>
+        </dd>
+    </dl>
+</div>
+</div>
+
+            
+
+
+        </div>
+
+
+        
+        
+        
+
+
+
+        <div id="marketing-ad">
+
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/plugins-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/response.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/elixer-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/slick-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/base-min.js"></script>
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="/herring/js/PROD/analytics-min.js" ></script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFMDCPL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+        
+        
+        
+        
+        
+
+    </body>
+</html>

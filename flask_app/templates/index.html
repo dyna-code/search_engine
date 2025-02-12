@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    
+</head>
+<body style = "text-align: center">
+    <h1 style = "text-align: center">Search Engine</h1>
+    <form method="POST">
+        <label for="search_query">Search:</label>
+        <br>
+        <input type="text" id="search_query" name="search_query" placeholder="Enter your search query" required>
+        <br>
+        <br>
+        <label>Political Lean:</label>
+        <br>
+        <input type="radio" name="search_type" value="4" required>
+        <label>Far Left</label>
+        <input type="radio" name="search_type" value="3">
+        <label>Left</label>
+        <input type="radio" name="search_type" value="2">
+        <label>Moderate</label>
+        <input type="radio" name="search_type" value="1">
+        <label>Right</label>
+        <input type="radio" name="search_type" value="0">
+        <label>Far Right</label>
+        <br>
+        <button type="submit">Search</button>
+        <br>
+        <br>
+        <label style = "font-weight: bold">{{statement}}</label>
+    </form>
+
+    <br>
+    <br>
+    {% if data %}
+        <div style="text-align: center; margin: auto">
+            <table>
+                <tr>
+                <th style = "width: 15%">News Site</th>
+                <th style = "width: 15%">Lean</th>
+                <th>Link</th>
+                </tr>
+                {% for x in output %}
+                    <tr>
+                    <td style = "width: 15%">{{x.domain}}</td>
+                    <td style = "width: 15%">{{x.lean}}</td>
+                    <td><a href = "{{ x.file }}"/> {{x.title}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,668 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+
+    
+    
+
+    
+    
+
+    <HEAD>
+
+        
+        <link rel="icon" type="image/png" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/favicon.ico" />
+
+        
+        
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="/herring/css/rcss/base.css" type="text/css" />
+
+
+<link rel="stylesheet" media="all" href="/herring/css/fonts/iconFonts.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.min.css" />
+<link rel="stylesheet" href="/herring/css/slick.css" type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+<script type="text/javascript" src="/herring/js/PROD/modernizr.custom.17405.js" ></script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+
+
+
+<script type="text/javascript" src="/dwr/engine.js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="text/javascript" src="/dwr/interface/AJAXBEE.js"></script>
+<script type="text/javascript" src="/dwr/interface/AJAXSESS.js"></script>
+<script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.all.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0FNFZQF1X"></script>
+<script src="/herring/js/PROD/analyticsv2-min.js"></script>
+
+<!-- OpenBook -->
+<script src="https://stream.aidemsrv.com/lib/stream.js" data-key="clnabfeym018j08mgcv8zfkrd" data-init-only="false" defer></script>
+<script>
+  window.aidemstream = window.aidemstream || (function(){(window.aidemstreamQ = window.aidemstreamQ || []).push(arguments);})
+</script>
+
+
+<script type="text/javascript">
+
+
+
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"enableCcpa":true,"countryDetection":true,"ccpaAcknowledgeOnDisplay":false,"whitelabel":false,"enableGdpr": true,"gdprAppliesGlobally":false,"lang":"en","siteId":2150021,"cookiePolicyId":14516423, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#ee9b25","acceptButtonCaptionColor":"white","customizeButtonColor":"#212121","customizeButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","position":"float-bottom-center","textColor":"white","backgroundColor":"#000001" },
+        "callback" : {
+            "onConsentFirstGiven": function(consent){
+                var now = new Date();
+                var time = now.getTime();
+                var days = 365;
+                var expireTime = time +(days*1000*24*60*60);
+                now.setTime(expireTime);
+                document.cookie = 'kconsentaccepteddate=' + time +';expires='+now.toUTCString()+';path=/';
+            }
+        }
+    };
+</script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+<script>
+
+
+jwplayer.key="xj1hV5VsEvDGah84oQxgewtJ/m0RJdKiOQTKFa5GdB8=";
+</script>
+
+<script type="text/javascript">
+    function onSubmitSignup(token){
+        //document.getElementById("formEmailCredentials").submit();
+        document.getElementById("formAccountCreate").submit();
+        console.log(token);
+    }
+
+    function onSubmitLogin(token){
+        document.getElementById("formLogIn").submit();
+        console.log(token);
+    }
+
+
+    function paymentSubmit(){
+        var $forms = $('form#formPayment');
+        $forms.off("submit.submitting");
+        $forms.removeClass("submitting");
+
+        // Reset buttons
+        var $formButtons = $forms.find("button");
+        if($formButtons.length > 0) {
+            $formButtons.removeAttr("disabled");
+            $formButtons.remove("span.submitting");
+        }
+
+        // Set submit function --- to show user something is happening on submit
+        $forms.on("submit.submitting", function(e){
+
+            var className = "submitting";
+            var $thisForm = $(this);
+
+            // do not submit again if form is already submitting
+            if($thisForm.hasClass(className)) {
+
+                return false;
+            }
+            else {
+
+                var $buttons = $thisForm.find("button");
+                if($buttons.length > 0) {
+                    $buttons.attr("disabled", "disabled");//&#x2601;
+                    $buttons.prepend("<span class='submitting'><i class='icon-cloud'></i></span>");
+                }
+
+                $thisForm.addClass(className);
+
+                return true;
+            }
+        });
+
+
+
+
+        document.getElementById("formPayment").submit();
+        console.log("Testing");
+    }
+
+
+
+
+
+
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7DFL67');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFMDCPL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '990276938526275');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=990276938526275&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<title>Create Account Step One - Enter Email | OAN Live</title>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logo/apple-icon-logo.png" />
+
+    </HEAD>
+
+    
+    
+    
+    
+	
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+	
+	
+	
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    <body  class="" data-responsejs='{"create": [{"prop":"width","prefix":"r","breakpoints":[0, 320, 480, 560, 672, 768, 864, 960, 1024, 1200, 1440]}]}' data-ktv="" data-eip="true" >
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        
+        
+        
+
+
+
+
+        
+        
+        
+
+
+
+
+        <div id="container-page">
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div id="header-container" class="clear clearfix relief">
+    <div class="container-section">
+        <div id="head-home" class="float-left">
+            <div class="display-flex align-center">
+                <button class="display-inline-block hamburger js-hamburger" type="menu" title="Menu" data-hamburger-movecontent="y" data-hamburger-of="hamburger-menu-main">
+                    <span class="icon uppercase display-block size-smallest">Menu</span>
+                </button>
+                <a href="/home.ktv" class="display-inline-block size-large "><img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-logo.svg" alt="Oan Live Home" height="50"  class="display-inline-block" /><!--
+                    --></a>
+
+                
+                
+                    
+                
+                
+            </div>
+        </div>
+        <div id="head-sub" class="float-right is-hiddenb-pre-ml">
+            
+                
+                
+
+                    
+                    
+                        
+                           
+                        
+                        
+                    
+
+                    
+                    
+
+                    
+                    
+                        <a href="/login.ktv" class="display-inline-block size-large box-g-t-a"><span class="display-inline-block size-medium">Log in</span></a>
+                    
+                    <a href="/join/signup.ktv" id="join-button" class="is-hiddenid-pre-s display-inline-block button-cta"  data-mp='{"page":"#body #create-account-stepone-container"}' >
+                        <span class="display-inline-block size-medium">Sign Up For OAN Live</span>
+                    </a>
+
+                
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="hamburger-menu-main" class="clearfix clear paint-white relief hamburger-menu-left">
+    <ul>
+        
+        <li>
+            <a href="/home.ktv" class="box-w-t-a display-block width-max">OAN Live</a>
+        </li>
+        
+            
+            
+                <li>
+                    <a href="/join/credentials/email.ktv?" data-mp='{"page":"#body #create-account-stepone-container"}' class=" box-w-t-a display-block width-max" >Join</a>
+                </li>
+                <li>
+                    <a href="/login.ktv" class="box-w-t-a display-block width-max">Log in</a>
+                </li>
+            
+        
+        <li>
+            
+        </li>
+        <li>
+           
+        </li>
+        <li>
+            <a href="/support/faq.ktv" class="box-w-t-a display-block width-max">FAQ & Support</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+            
+
+
+            <div id="container-body" >
+
+
+                
+                
+                
+                    
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+  
+  
+    
+  
+
+
+<div class="block paint-light-grey clearfix clear" style="height: 77vh;">
+    <div class="content clearfix">
+
+        <h1>Create Account</h1>
+        <p class="italic color-accent size-large">Step 1 - Enter & Confirm Email</p>
+        <p class="size-xsmall color-accent-dark padding-bottom"><span class="color-accent text-weight-bold">Step 1</span> - Step 2 - Step 3</p>
+
+
+        
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+        
+        <div class="display-block clear clearfix">
+            <div class="display-block xs-col-4 s-col-4 sm-col-6 m-col-6 mml-col-5 ml-col-6 mll-col-6 l-col-6 xl-col-6 xxl-col-6 xxxl-col-6">
+                <div id="create-account-stepone-container">
+                    <form action="/join/credentials/emailSubmit.ktv" method="post" name="formEmailCredentials" id="formAccountCreate" class="display-block clearfix clear" >
+                        <h2 class="text-weight-bold uppercase size-regular">Account Email</h2>
+                        <p class="size-small padding-top-fourth padding-bottom-half">Provide and confirm your email address. Your email address will be your account's main identification.</p>
+                        <div class="margin-bottom-half" >
+                            <label for="field-email"  class="is-field is-required" >Email</label>
+                            <input type="text" placeholder="email@domain.com" name="email" id="field-email" class="is-field is-required l-width-max" maxlength="80" value="" autocapitalize="off" autocorrect="off" autofocus />
+                        </div>
+                        <div class="margin-bottom" >
+                            <label for="field-confirmEmail"  class="is-field is-required" >Confirm email</label>
+                            <input type="text" placeholder="email@domain.com" name="confirmEmail" id="field-confirmEmail" class="is-field is-required l-width-max" maxlength="80" value="" autocapitalize="off" autocorrect="off" />
+                        </div>
+
+                        
+
+                        
+
+
+
+
+
+
+
+
+<div class="display-block padding-top-half text-right">
+
+    
+    
+    
+    
+        
+            
+            
+            
+            
+            
+
+            
+                
+                
+            
+
+            
+        
+    
+
+
+
+     
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    <button type="submit" class="cta  g-recaptcha"   data-sitekey="6LdDjoUeAAAAALyVIOGH7Q-iOx1tGHHReWXygyC1" data-callback="onSubmitSignup"  data-action="submit" data-size="invisible">Submit</button>
+</div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+
+
+            </div>
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div class="clear clearfix display-block paint-accent-2">
+<div class="block paint-accent-dark-p5 clearfix clear">
+    <p class="display-block padding-bottom text-center">
+       
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        View our <a href="/sitemap.ktv" class="lg-t-p underline">site map</a>.
+    </p>
+    <p class="color-light-grey size-xsmall">
+        
+        &copy; 2024 OAN Live, an Herring Networks Company.
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        Use of the OAN Live service constitutes an acceptance of the service's <a href="/terms.ktv" class="lg-t-p underline">terms</a> and <a href="/privacy.ktv" class="lg-t-p underline">privacy</a>.
+    </p>
+    <dl class="display-block text-right">
+        <dt class="padding-bottom-half color-light-grey">
+            Questions? Comments?
+        </dt>
+        <dd>
+            <a href="/support/faq.ktv" class="display-inline-block button-ghost-light">FAQ</a>
+            <a href="/support/contact.ktv" class="display-inline-block button-ghost-light">Contact Us</a>
+        </dd>
+    </dl>
+</div>
+</div>
+
+            
+
+
+        </div>
+
+
+        
+        
+        
+
+
+
+        <div id="marketing-ad">
+
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/plugins-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/response.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/elixer-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/slick-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/base-min.js"></script>
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="/herring/js/PROD/analytics-min.js" ></script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFMDCPL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+        
+        
+        
+        
+        
+
+    </body>
+</html>

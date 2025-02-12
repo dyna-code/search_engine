@@ -1,0 +1,638 @@
+
+
+
+
+
+
+
+
+<html>
+    
+    
+
+    
+    
+    <head>
+
+    
+            <link rel="icon" type="image/png" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/favicon.ico" />
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<title>Your News, Your Network | OAN Live</title>
+
+<meta name="description" content="OAN Live provides One America News live 24/7 reliable news  on your desktop or mobile device without a contract, giving you the most trusted news everywhere you go. Sign up to enjoy OAN Live" />
+<meta name="keywords" content="OAN Live, Live News, 24/7 News Network, One America News, OAN TV, OANN" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logo/apple-icon-logo.png" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0FNFZQF1X"></script>
+      <script src="/herring/js/PROD/analyticsv2-min.js"></script>
+            <link rel="stylesheet" href="/herring/css/style.css" />
+            <link rel="stylesheet" href="/herring/css/skins/videojs.min.css" />
+
+            <link rel="stylesheet" href="/herring/css/glide.core.min.css" />
+            <link rel="stylesheet" href="/herring/css/glider-theme.css" />
+
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+              <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+
+    
+    
+    
+        
+
+
+<div id="app">
+
+  <div class="relative bg-gray-50 overflow-hidden " style="background-image:url('https://oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/heros/hero-bg-1.png'); background-size:cover">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="relative pt-7 pb-16 sm:pb-24" >
+      <div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+            <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="home.ktv" class="drop-shadow-md">
+                  <span class="sr-only">Oan Live</span>
+                  <img class="h-8 w-auto sm:h-14" src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-white-logo.svg" alt="">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-expanded="false" v-on:click="toggle">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hidden md:flex md:space-x-10">
+
+            </div>
+            <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0" >
+
+              
+                
+                
+                  <a href="join.ktv" class="whitespace-nowrap text-base font-medium text-gray-200 hover:text-gray-400 pr-4"> Sign up </a>
+                
+              
+
+            <span class="inline-flex rounded-md shadow">
+              <a href="login.ktv" class="inline-flex items-center px-4 py-2 border border-transparent bg-primary-600 text-base font-medium rounded-md text-white  hover:bg-primary-700"> Log in </a>
+            </span>
+            </div>
+          </nav>
+        </div>
+
+        <!--
+          Mobile menu, show/hide based on menu open state.
+
+          Entering: "duration-150 ease-out"
+            From: "opacity-0 scale-95"
+            To: "opacity-100 scale-100"
+          Leaving: "duration-100 ease-in"
+            From: "opacity-100 scale-100"
+            To: "opacity-0 scale-95"
+        -->
+        <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" v-show="open">
+          <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-logo.svg" alt="Oan Live">
+              </div>
+              <div class="-mr-2">
+                <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-500" @click="open = false">
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="px-2 pt-2 pb-3">
+              <a href="login.ktv" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Log in</a>
+
+            </div>
+            <a href="join.ktv" class="block w-full px-5 py-3 text-center font-medium text-secondary-600 bg-gray-50 hover:bg-gray-100"> Sign up </a>
+          </div>
+        </div>
+      </div>
+
+      <main class="md:mt-44 mx-auto max-w-7xl px-4 sm:mt-24">
+        <div class="text-center">
+          <h1 class="text-4xl tracking-tight font-headers font-extrabold text-white sm:text-5xl md:text-6xl">
+            <span class="block xl:inline">One America News Network</span>
+
+          </h1>
+          <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Get credible national and international news anywhere you go</p>
+          <div class="max-w-xs mx-auto mt-2 flex md:flex-row justify-items-center items-center">
+            <div class="flex-1 ">
+              <a href="https://apps.apple.com/us/app/oan-live/id1609474272?see-all=reviews"> <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/apple-app-store-badge.svg" width="139" height="50" class="mx-auto"/> </a>
+            </div>
+            <div class="flex-1 ">
+             <a href="https://play.google.com/store/apps/details?id=com.oan.live&hl=en_US&gl=US"><img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/google-play-badge.svg" height="50" width="149" class="mx-auto"/></a>
+            </div>
+          </div>
+          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+            <div class="rounded-md shadow-md">
+              
+                
+                
+                  <a href="join.ktv" class="w-full flex items-center justify-center px-8 py-3 font-text text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 md:py-4 md:text-xl md:px-10 tracking-wide">Subscribe Now</a>
+                
+              
+
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+  <div class="bg-secondary-900">
+    <div class="pt-12 sm:pt-16 lg:pt-20">
+      <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
+
+          <p class="text-3xl font-extrabold font-text text-white sm:text-4xl lg:text-5xl">Choose your plan</p>
+          <p class="text-xl text-gray-300">Join OAN Live and watch live on any device, anywhere. No extra fees.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
+      <div class="relative">
+        <div class="absolute inset-0 h-3/4 bg-secondary-900"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                <div>
+                  <h3 class="inline-flex px-4 py-1 rounded-full font-text text-sm font-semibold tracking-wide uppercase bg-primary-100 text-primary-600" id="tier-standard">Monthly</h3>
+                </div>
+                <div class="mt-4 flex items-baseline text-6xl font-extrabold font-headers">
+                  $4.99
+                  <span class="ml-1 text-2xl font-medium text-gray-500"> /mo </span>
+                </div>
+                <p class="mt-5 text-lg text-gray-500">Enjoy 24/7 credible news month to month with no contract, free 7 day trial</p>
+              </div>
+              <div class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-white space-y-6 sm:p-10 sm:pt-6">
+                <ul role="list" class="space-y-4">
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">Live 24/7 News stream</p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">Watch on all compatible devices</p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">No limit on devices</p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base  text-gray-700">Billed monthly, 7 day free trial </p>
+                  </li>
+                </ul>
+                <p class="text-sm text-gray-500 ml-3 italic">*Free 7 day trial.</p>
+                <div class="rounded-md shadow">
+                  
+                    
+                    
+                      <a href="join/credentials/email.ktv" class="flex items-center justify-center px-5 py-4 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700" aria-describedby="tier-standard"> Select Monthly Plan </a>
+                    
+                  
+
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col relative z-10 rounded-lg shadow-lg border-primary-600 border-2 ">
+
+           
+              <div class="absolute inset-x-0 top-0 translate-y-px transform">
+                <div class="flex -translate-y-1/2 transform justify-center">
+                  <span class="inline-flex rounded-full bg-primary-600 px-4 text-base font-semibold text-white z-10">Most Popular</span>
+                </div>
+              </div>
+              <div class="rounded-t-lg px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                <div>
+                  <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-primary-100 text-primary-600" id="tier-standard">Yearly</h3>
+                </div>
+                <div class="mt-4 flex items-baseline text-6xl font-extrabold font-headers">
+                  <span class="text-2xl text-gray-400 font-bold line-through pr-3 inline-block">$59.00 </span>
+                  $53.85
+                  <span class="ml-1 text-2xl font-medium text-gray-500"> /yr </span>
+
+                </div>
+                <p class="mt-1 text-primary-400 font-headers font-bold text-xl block text-center">Save 10%</p>
+                <p class="mt-1 text-lg text-gray-500">Enjoy One America News for the whole year. Save 10% when selecting the annual plan.  </p>
+              </div>
+              <div class="flex-1 flex flex-col justify-between px-6 pt-5 pb-8 bg-white  rounded-b-lg space-y-6 sm:p-10 sm:pt-5">
+                <ul role="list" class="space-y-4">
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">Live 24/7 News stream</p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">Watch on all compatible devices</p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">No limit on devices</p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">Billed yearly, 10% off.</p>
+                  </li>
+                </ul>
+
+                <div class="rounded-md shadow">
+                  
+                    
+                    
+                      <a href="join/credentials/email.ktv" class="flex items-center justify-center px-5 py-4 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 z-20" aria-describedby="tier-standard"> Select Annual Plan </a>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="max-w-full bg-black md:relative block lg:pb-5vh pb-4vh h-40vh md:h-auto mx-auto" >
+    <div class="max-w-full absolute mx-auto block md:h-40vh h-40vh right-0" >
+      <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_2500w.png" class="max-w-full block h-20vh  z-10 md:hidden" alt="OANN What on your TV?" loading="lazy" sizes="100vw" srcset="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_800w.png 800w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_1080w.png 1080w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_1400w 1400w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_1500w.png 1500w"/>
+      <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_2500w.png" class="max-w-full hidden h-40vh  z-10 md:block" alt="OANN What on your TV?" loading="lazy" sizes="100vw" srcset="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_800w.png 800w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_1080w.png 1080w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_1400w 1400w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_1600w.png 1600w //oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/oann_landing_page_tv_2500w.png 2500w"/>
+    </div>
+    <div class="max-w-7xl mx-auto  relative left-0 top-0 pb-4   px-4 lg:px-8 md:h-35vh h-20vh">
+
+      <div class="max-w-5xl mx-auto max-w-md block pt-8">
+        <div class="flex justify-between block flex-col-reverse md:flex-row ">
+          <div class="flex-1 pr-3">
+            <h2 class="font-headers text-gray-100 text-semibold md:font-bold font-bold md:text-4xl text-md">What is One America News?</h2>
+            <p class="md:mt-4 md:text-base text-sm text-thin md:text-normal text-gray-100 font-text py-3 md:max-w-md w-1/2">
+              An independent, cutting edge platform for political discussions with more live news coverage than any other news network.
+
+            </p>
+            <div class="rounded-md shadow-md max-w-md mt-3">
+              
+                
+                
+                  <a href="join.ktv?" class="flex  items-center font-text font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 text-lg  justify-center px-5 py-4">Start Watching OAN Live</a>
+                
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="max-w-full relative" style="background:url('//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/shows-landing-bg.png') no-repeat;background-size: cover;">
+    <div class="max-w-7xl mx-auto  px-4 pb-4  lg:px-8 lg:py-5vh py-4vh" >
+      <div class="max-w-5xl mx-auto max-w-md">
+        <div class="flex justify-between justify-center flex-col-reverse md:flex-row">
+          <div class="flex-1 pr-3 text-center">
+            <h2 class="font-headers text-gray-100 text-bold font-bold md:text-4xl text-3xl antialiased ">The shows you love</h2>
+           
+          </div>
+        </div>
+        <div class="grid md:grid-cols-5 grid-cols-4 gap-3 mt-5">
+          <div class="rounded-lg">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-real-america.png" class="max-w-full block rounded-lg" alt="Real America" />
+          </div>
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-tipping-point.png" class="max-w-full block rounded-md" alt="Tipping Point" />
+          </div>
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-in-focus-2023.png" class="max-w-full block rounded-md" alt="In Focus" />
+          </div>
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-weekly-briefing.png" class="max-w-full block rounded-md" alt="Weekly Briefing" />
+          </div>
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-pearson-sharp.png" class="max-w-full block rounded-md" alt="Pearson Sharp Reports" />
+          </div>
+
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-nights-chris-boyle.png" class="max-w-full block rounded-md" alt="Nights with Chris Boyle" />
+          </div>
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-hungry-heroes.png" class="max-w-full block rounded-md" alt="Hungry Heros" />
+          </div>
+          <div class="rounded-md ">
+            <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/show-moments-in-history.png" class="max-w-full block rounded-md" alt="Moments In History" />
+          </div>
+        </div>
+
+        <div class="mt-4 rounded-lg shadow-lg max-w-md mx-auto">
+          
+            
+            
+              <a href="join.ktv?" class="flex  items-center font-text font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 text-lg  justify-center px-5 py-4">Watch Now</a>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ 
+
+  <div class="max-w-7xl mx-auto px-4 pb-4 lg:mt-40 lg:px-8 lg:py-5vh py-4vh">
+    <div class="max-w-5xl mx-auto max-w-md">
+      <div class="flex justify-between flex-col md:flex-row">
+
+
+
+        <div class="flex-1 pr-3">
+          <h2 class="font-headers text-gray-900 text-bold font-extrabold text-4xl">Watch on your TV or anywhere.
+          </h2>
+          <p class="mt-4 text-base text-gray-600 font-text py-3 max-w-md">
+            Watch OAN Live on your smartphone, tablet, laptop, desktop or our TV apps from Roku, Apple TV, Fire TV and more.
+
+          </p>
+
+        </div>
+
+        <div class="flex-1 mt-10 md:mt-0">
+
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/home/device-hero.png" alt="Prime Time" />
+
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-3 mt-10 mx-auto max-w-5xl justify-items-center items-center md:gap-y-14 gap-y-10 ">
+        <div class="p-2">
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/apple-ios-logo.svg" width="103" height="56" />
+        </div>
+        <div class="p-2">
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/apple-tv-logo.svg" width="109" height="52"/>
+        </div>
+        <div class="p-2">
+         <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/googletv-logo.svg" />
+        </div>
+        <div class="p-2">
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/android-logo.svg" />
+        </div>
+        <div class="p-2">
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/androidtv-logo.svg" />
+        </div>
+        <div class="p-2">
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/roku-logo.svg" />
+        </div>
+        <div class="p-2">
+          <img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/devices/chromecast-logo.svg" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <footer class="bg-secondary-900" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div class="space-y-8 xl:col-span-1">
+          <img class="h-14" src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-white-knockout.svg" alt="OAN Live">
+
+
+          <p class="text-white text-base">Your Nation Your News</p>
+          <div class="flex space-x-6">
+
+
+
+
+
+          </div>
+        </div>
+        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold text-primary-400 tracking-wider uppercase">Subscriber</h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a href="join/credentials/email.ktv" class="text-base text-white hover:text-gray-400"> Sign Up </a>
+                </li>
+
+                <li>
+                  <a href="login.ktv" class="text-base text-white hover:text-gray-400"> Log in </a>
+                </li>
+
+                <li>
+                  <a href="key/request.ktv" class="text-base text-white hover:text-gray-400"> Password Reset </a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+              <h3 class="text-sm font-semibold text-primary-400 tracking-wider uppercase">Support</h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a href="support/faq.ktv" class="text-base text-white hover:text-gray-400"> FAQ </a>
+                </li>
+
+                <li>
+                  <a href="support/contact.ktv" class="text-base text-white hover:text-gray-400"> Contact Us </a>
+                </li>
+
+
+              </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div class="mt-12 md:mt-0">
+              <h3 class="text-sm font-semibold text-primary-400 tracking-wider uppercase">Legal</h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a href="terms.ktv" class="text-base text-white hover:text-gray-400"> Terms of Use </a>
+                </li>
+
+                <li>
+                  <a href="privacy.ktv" class="text-base text-white hover:text-gray-400"> Privacy </a>
+                </li>
+
+                <li>
+                  <a href="cookies.ktv" class="text-base text-white hover:text-gray-400"> Cookies </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-secondary-800 pt-8">
+        <p class="text-base text-white xl:text-center">&copy; 2022 OAN Live, Inc. All rights reserved.</p>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+
+
+</div>
+
+
+
+    
+
+
+    <div id="marketing-ad">
+
+    </div>
+    <script type="text/javascript" src=" https://vid.springserve.com/ssusersync"></script>
+
+    <script type="text/javascript" src="/herring/js/PROD/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/herring/js/PROD/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/herring/js/PROD/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/herring/js/PROD/base-min.js"></script>
+    <script src="https://vjs.zencdn.net/7.14.3/video.min.js" type="application/javascript"></script>
+    <script src="https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.js" type="application/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    
+    
+    
+        
+            <script type="text/javascript" src="/herring/js/PROD/main-min.js" ></script>
+        
+    
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFMDCPL"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+</body>
+</html>

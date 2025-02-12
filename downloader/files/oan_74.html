@@ -1,0 +1,1011 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+
+    
+    
+
+    
+    
+
+    <HEAD>
+
+        
+        <link rel="icon" type="image/png" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/favicon.ico" />
+
+        
+        
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="/herring/css/rcss/base.css" type="text/css" />
+
+
+<link rel="stylesheet" media="all" href="/herring/css/fonts/iconFonts.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.min.css" />
+<link rel="stylesheet" href="/herring/css/slick.css" type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+<script type="text/javascript" src="/herring/js/PROD/modernizr.custom.17405.js" ></script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+
+
+
+<script type="text/javascript" src="/dwr/engine.js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="text/javascript" src="/dwr/interface/AJAXBEE.js"></script>
+<script type="text/javascript" src="/dwr/interface/AJAXSESS.js"></script>
+<script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.all.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0FNFZQF1X"></script>
+<script src="/herring/js/PROD/analyticsv2-min.js"></script>
+
+<!-- OpenBook -->
+<script src="https://stream.aidemsrv.com/lib/stream.js" data-key="clnabfeym018j08mgcv8zfkrd" data-init-only="false" defer></script>
+<script>
+  window.aidemstream = window.aidemstream || (function(){(window.aidemstreamQ = window.aidemstreamQ || []).push(arguments);})
+</script>
+
+
+<script type="text/javascript">
+
+
+
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"enableCcpa":true,"countryDetection":true,"ccpaAcknowledgeOnDisplay":false,"whitelabel":false,"enableGdpr": true,"gdprAppliesGlobally":false,"lang":"en","siteId":2150021,"cookiePolicyId":14516423, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#ee9b25","acceptButtonCaptionColor":"white","customizeButtonColor":"#212121","customizeButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","position":"float-bottom-center","textColor":"white","backgroundColor":"#000001" },
+        "callback" : {
+            "onConsentFirstGiven": function(consent){
+                var now = new Date();
+                var time = now.getTime();
+                var days = 365;
+                var expireTime = time +(days*1000*24*60*60);
+                now.setTime(expireTime);
+                document.cookie = 'kconsentaccepteddate=' + time +';expires='+now.toUTCString()+';path=/';
+            }
+        }
+    };
+</script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+<script>
+
+
+jwplayer.key="xj1hV5VsEvDGah84oQxgewtJ/m0RJdKiOQTKFa5GdB8=";
+</script>
+
+<script type="text/javascript">
+    function onSubmitSignup(token){
+        //document.getElementById("formEmailCredentials").submit();
+        document.getElementById("formAccountCreate").submit();
+        console.log(token);
+    }
+
+    function onSubmitLogin(token){
+        document.getElementById("formLogIn").submit();
+        console.log(token);
+    }
+
+
+    function paymentSubmit(){
+        var $forms = $('form#formPayment');
+        $forms.off("submit.submitting");
+        $forms.removeClass("submitting");
+
+        // Reset buttons
+        var $formButtons = $forms.find("button");
+        if($formButtons.length > 0) {
+            $formButtons.removeAttr("disabled");
+            $formButtons.remove("span.submitting");
+        }
+
+        // Set submit function --- to show user something is happening on submit
+        $forms.on("submit.submitting", function(e){
+
+            var className = "submitting";
+            var $thisForm = $(this);
+
+            // do not submit again if form is already submitting
+            if($thisForm.hasClass(className)) {
+
+                return false;
+            }
+            else {
+
+                var $buttons = $thisForm.find("button");
+                if($buttons.length > 0) {
+                    $buttons.attr("disabled", "disabled");//&#x2601;
+                    $buttons.prepend("<span class='submitting'><i class='icon-cloud'></i></span>");
+                }
+
+                $thisForm.addClass(className);
+
+                return true;
+            }
+        });
+
+
+
+
+        document.getElementById("formPayment").submit();
+        console.log("Testing");
+    }
+
+
+
+
+
+
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7DFL67');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFMDCPL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '990276938526275');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=990276938526275&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<title>FAQ and Support | OAN Live</title>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logo/apple-icon-logo.png" />
+
+    </HEAD>
+
+    
+    
+    
+    
+	
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+	
+	
+	
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    <body  class="" data-responsejs='{"create": [{"prop":"width","prefix":"r","breakpoints":[0, 320, 480, 560, 672, 768, 864, 960, 1024, 1200, 1440]}]}' data-ktv="" data-eip="true" >
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        
+        
+        
+
+
+
+
+        
+        
+        
+
+
+
+
+        <div id="container-page">
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div id="header-container" class="clear clearfix relief">
+    <div class="container-section">
+        <div id="head-home" class="float-left">
+            <div class="display-flex align-center">
+                <button class="display-inline-block hamburger js-hamburger" type="menu" title="Menu" data-hamburger-movecontent="y" data-hamburger-of="hamburger-menu-main">
+                    <span class="icon uppercase display-block size-smallest">Menu</span>
+                </button>
+                <a href="/home.ktv" class="display-inline-block size-large "><img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-logo.svg" alt="Oan Live Home" height="50"  class="display-inline-block" /><!--
+                    --></a>
+
+                
+                
+                    
+                
+                
+            </div>
+        </div>
+        <div id="head-sub" class="float-right is-hiddenb-pre-ml">
+            
+                
+                
+
+                    
+                    
+                        
+                           
+                        
+                        
+                    
+
+                    
+                    
+                        <a href="/join/credentials/email.ktv?" class=" display-inline-block size-large box-g-t-a" data-mp='{"page":"#body #create-account-stepone-container"}' >
+                            <span class="display-inline-block size-medium">Join</span>
+                        </a>
+                    
+
+                    
+                    
+                        <a href="/login.ktv" class="display-inline-block size-large box-g-t-a"><span class="display-inline-block size-medium">Log in</span></a>
+                    
+                    <a href="/join/signup.ktv" id="join-button" class="is-hiddenid-pre-s display-inline-block button-cta"  data-mp='{"page":"#body #create-account-stepone-container"}' >
+                        <span class="display-inline-block size-medium">Sign Up For OAN Live</span>
+                    </a>
+
+                
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="hamburger-menu-main" class="clearfix clear paint-white relief hamburger-menu-left">
+    <ul>
+        
+        <li>
+            <a href="/home.ktv" class="box-w-t-a display-block width-max">OAN Live</a>
+        </li>
+        
+            
+            
+                <li>
+                    <a href="/join/credentials/email.ktv?" data-mp='{"page":"#body #create-account-stepone-container"}' class=" box-w-t-a display-block width-max" >Join</a>
+                </li>
+                <li>
+                    <a href="/login.ktv" class="box-w-t-a display-block width-max">Log in</a>
+                </li>
+            
+        
+        <li>
+            
+        </li>
+        <li>
+           
+        </li>
+        <li>
+            <a href="/support/faq.ktv" class="box-w-t-a display-block width-max">FAQ & Support</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+            
+
+
+            <div id="container-body" >
+
+
+                
+                
+                
+                    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+<div class="metahero">
+    
+        <div>
+            <div class="content">
+                <h1 class="text-weight-bolder size-stupid-big">Subscriber Support</h1>
+                <p class="size-xlarge padding-bottom-fourth is-hiddenb-pre-sm">The subscriber matters most.</p>
+                
+            </div>
+        </div>
+    
+    <picture>
+        
+            
+                
+                    
+                    
+                    
+                
+                
+            
+        
+        <source srcset="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/heros/laptopDesk_1400x440.png" media="(min-width: 1024px)">
+        <source srcset="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/heros/laptopDesk_1200x400.png" media="(min-width: 480px)">
+        <source srcset="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/heros/laptopDesk_480x400.png" media="(min-width: 0)">
+        <img srcset="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/heros/laptopDesk_480x400.png" alt="OAN Live ">
+    </picture>
+</div>
+
+<div class="display-block paint-light-grey">
+    <div id="container-body-sub">
+
+
+        
+        
+        
+            
+
+
+
+
+
+
+
+
+<div class="content padding-bottom">
+    <div class="clearfix display-block">
+        <h1 class="text-shadow-dark text-center margin-bottom color-white">F. A. Q. & A.</h1>
+        <div class="block paint-white margin-top-half margin-bottom">
+            <h2 class="size-regular capitalize text-weight-bold text-center">Frequently asked questions & answers</h2>
+            <p class="padding-top">Use the category buttons to find particular questions and answers. If you do not see a particular solution, please <a href="/support/contact.ktv" class="underline">contact support</a> with your question.</p>
+        </div>
+
+        
+
+        <div class="display-block margin-bottom-half ">
+            <ul class="clearfix clear display-block js-tabs-container" >
+                <li class="display-block margin-bottom-half xs-col-4 s-col-4 sm-col-3 m-col-3 mml-col-8 ml-col-3 mll-col-3 l-col-3 xl-col-3 xxl-col-3 xxxl-col-3">
+                    <a href="#general" class="js-tab button-ghost-dark display-block width-max" data-tabcontent="#general" ><span class="icon-spinner9" >General</span></a>
+                </li>
+                <li class="display-block margin-bottom-half xs-col-2 s-col-2 sm-col-3 sm-col-last m-col-3 m-col-last m-col-last mml-col-2 ml-col-3 mll-col-3 l-col-3 xl-col-3 xxl-col-3 xxxl-col-3">
+                    <a href="#account" class="js-tab button-ghost-dark display-block width-max" data-tabcontent="#account" ><span class="icon-user" >Account</span></a>
+                </li>
+                <li class="display-block margin-bottom-half xs-col-2 xs-col-last s-col-2 s-col-last sm-col-2 m-col-2 mml-col-2 ml-col-2 mll-col-2 l-col-2 xl-col-2 xxl-col-2 xxxl-col-2">
+                    <a href="#streaming" class="js-tab button-ghost-dark display-block width-max" data-tabcontent="#streaming" ><span class="icon-tv" >Play</span></a>
+                </li>
+                <li class="display-block margin-bottom-half xs-col-2 s-col-2 sm-col-2 m-col-2 mml-col-2 ml-col-2 mll-col-2 l-col-2 xl-col-2 xxl-col-2 xxxl-col-2">
+                    <a href="#apps" class="js-tab button-ghost-dark display-block width-max" data-tabcontent="#apps" ><span class="icon-mobile" >App</span></a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="block margin-bottom paint-white">
+
+            
+            <div id="general" >
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Is this service legal?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Yes! We have a licensing agreement with every network on the OAN Live platform to stream their channel(s).
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Do I Have To Sign A Contract?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            No. OAN Live is strictly on a month-to-month basis. You can add, remove or cancel your subscription at anytime right on your profile page. Your subscription will automatically renew until you select "discontinue" from the profile page and submit the form(s) that follows.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Can I watch OAN Live outside of the United States?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            It depends. Some of our licensing agreements with channels we carry prohibit distribution outside of the USA, and some of them do. For example, the channels in the OAN Live Worldwide package are available for viewing anywhere while the channels within the Base are mainly available only within the USA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="margin-bottom js-drawer">
+                  <h3 class="js-drawer-heading">
+                    How do I contact OAN Live?
+                  </h3>
+                  <div class="js-drawer-content">
+                    <p>
+                      To contact OAN Live Support you can send us a message at <a href="/support/contact.ktv">live.oann.com/support/contact.ktv</a> or you can call us 877 300-6266
+                    </p>
+                  </div>
+                </div>
+            </div>
+            
+            
+            <div id="streaming">
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        The file will not load or play on my mobile browser (usually Chrome / Firefox on Android Tablets). How can I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Some devices mobile browsers have a mobile view mode and a desktop view mode. We have seen that usually in Android tablet mobile browser apps such as Chrome and Firefox that the webpage is loaded in mobile view mode, which disables some needed features. A potential fix is when viewing the mobile version of a page, open the browser menu and check the box located next to "Request Desktop site." The Web page will automatically begin to reload in the background in the desktop mode.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        When I try to watch a channel I receive an M3U8 / no levels to play error. How do I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            When using the available apps, you may need to log out and then log in to refresh the session. Otherwise, you may receive and M3U8 error if a firewall or network administrator is blocking the stream, using a proxy or VPN. This is typically only a problem with work/office, commercial or public web connections where the network administrators have a lot of safe guards in place. If you receive this error please check with your network administrator. Make sure your firewall isn't blocking incoming traffic, and don't use a proxy or VPN to access public web.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        When I try to watch a channel I receive an m3u8 / HTTP cross-domain error. How do I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Aside from checking your connection via public connection hot-spots (see "no levels to play" question), you may need to check if you are using HTTPS or HTTP to watch our feeds. At this time you must be using HTTP://live.oann.com/ to watch some of our channels.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        My Android phone or tablet has Android recent software updates but I still can't stream anything. Why?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            While the player we use should work with all Android 4.1 devices and up, we have found some devices that just will not work with our player. Please try logging into live.oann.com website using a mobile browser in "desktop mode" to see the if the streams play. We are always making improvements to our apps so be sure to check back in the app stores for any updates.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Can I Stream in HD?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            We stream as many channels stream at a constant 720p HD. The only exceptions are for channels that are delivered to us in SD from the networks. Right now our top end feeds run around 4.5 mbps and SD channels are around 2 mbps.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Why Does the Sharpness of the Picture Sometimes Change?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            OAN Live streams live content,which means there may be some buffering during the live stream . Therefore, if your internet connection degrades, we want to do our best to make sure that your stream continues until your connection recovers, so you don't miss any of our excellent programming.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        How Fast Must My Internet Connection Be?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            We recommend that all subscribers have at least a 5 to 10 mbps connection. Live streaming is very dependent on having a strong and stable download speed. Unlike most video on demand services, we cannot buffer far into the future so you must have a good stable connection to reliably stream our service.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Even though a speed test says my download speeds are sufficient I continue to receive the lowest quality feed. How do I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Some service providers practice data throttling or slow down traffic from specific origins. In this case please try turning the power off on your router for 30 seconds and rebooting it.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Do I need to enable, disable, or download anything to use OAN Live?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            While we don't use flash streaming specifically, certain elements of our player require JavaScript and Flash Media Player to be installed to function properly on Macs and PCs. Also, be sure to have your devices' software updated to the latest version.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Are there certain settings I must have enabled or disabled?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            OAN Live has been designed and built responsively meaning the site will adjust according to the browser's page load width. However if using IE then it is recommended to disable compatibility mode. <span class="text-semibold">JavaScript and Flash Media Player must be installed and updated to subscribe and watch Klowd's content.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        What Devices Can I Watch OAN Live On?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            OAN Live is available on the following devices:
+                        </p>
+                        <ul>
+                            <li>
+                                Computer: Mac and PC browsers (Chrome, Firefox, Safari, Internet Explorer 9+)
+                            </li>
+                            <li>
+                                Mobile Web Browsing: Most Android devices 4.1 and higher & iOS devices (iPhone and iPad)
+                            </li>
+                            <li>
+                                Mobile Apps: Android, iOS
+                            </li>
+                            <li>
+                                Streaming TV: New AppleTV, Roku, Chromecast, & Amazon FireTV
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        How Do I Stream to My TV?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            You can download one of the OAN Live apps for streaming TV: AppleTV (Gen 4 or newer), Roku,  Chromecast, or Amazon FireTV (boxes only for now). You can also stream to your TV through AirPlay using a Mac or iOS device and pushing to an AppleTV, or using Google Chrome as your browser and pushing to a Google Chromecast.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Can I watch OAN Live on my smart TV browser?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            It depends. We have not been able to test every smart TV's browser. At this point we know that some work and some do not. We will be coming out with a variety of applications over the next few months to make the service available on a variety of TV devices and smart TVs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div id="account">
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        How do I create an account?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Please visit https://live.oann.com/ in your preferred web browser. Click on the "Join" link.
+                        </p>
+                        <ul>
+                            <li>
+                                Step 1: Creates an account with an email and password.
+                            </li>
+                            <li>
+                                Step 2: Select available additional options and services.
+                            </li>
+                            <li>
+                                Step 3: Provide payment method. You can choose between PayPal or providing credit card information.
+                            </li>
+                            <li>
+                                Step 4: Thank you page will appear upon success.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        How do I edit my account?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            From the <a href="/account/subscriber.ktv" class="clr-opp underline">profile page</a>, you can edit your user email, password, billing information and / or subscription options.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        I am receiving an error message telling me that I have too many active accounts. How do I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            We are required to limit the number of simultaneous active users per account. Please do not share your account with anyone. If you have, please consider changing your password, and asking anyone that you have shared your account with to stop using. If you have not shared your account information with anyone then please make sure you have clicked the "log out" option from our apps when you are not using them.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        How do I cancel my subscription?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            You can discontinue your subscription from the <a href="/account/profile.ktv" class="underline clr-opp">profile page</a>... Doing so will deactivate your monthly subscription.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div id="apps">
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Does OAN Live Have an App?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Yes! See our <a href="/apps.ktv" class="clr-opp underline" >apps page</a> for more information. We have apps for:
+                        </p>
+                        <ul>
+                            <li>
+                                Mobile Apps: Android, iOS
+                            </li>
+                            <li>
+                                Streaming TV: AppleTV (Gen 4 or newer), Roku, Chromecast, & Amazon Fire TV
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        The file will not load or play on my mobile browser (usually Chrome / Firefox on Android Tablets). How can I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Some devices mobile browsers have a mobile view mode and a desktop view mode. We have seen that usually in Android tablet mobile browser apps such as Chrome and Firefox that the webpage is loaded in mobile view mode, which disables some needed features. A potential fix is when viewing the mobile version of a page, open the browser menu and check the box located next to "Request Desktop site." The Web page will automatically begin to reload in the background in the desktop mode.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        When I try to watch a channel I receive an M3U8 / no levels to play error. How do I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            When using the available apps, you may need to log out and then log in to refresh the session. Otherwise, you may receive and M3U8 error if a firewall or network administrator is blocking the stream, using a proxy or VPN. This is typically only a problem with work/office, commercial or public web connections where the network administrators have a lot of safe guards in place. If you receive this error please check with your network administrator. Make sure your firewall isn't blocking incoming traffic, and don't use a proxy or VPN to access public web.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        When I try to watch a channel I receive an m3u8 / HTTP cross-domain error. How do I fix this?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Aside from checking your connection via public connection hot-spots (see "no levels to play" question), you may need to check if you are using HTTPS or HTTP to watch our feeds. At this time you must be using HTTP://live.oann.com/ to watch some of our channels.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        My Android phone or tablet has Android recent software updates but I still can't stream anything. Why?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            While the player we use should work with all Android 4.1 devices and up, we have found some devices that just will not work with our player. Please try logging into live.oann.com website using a mobile browser in "desktop mode" to see the if the streams play. We are always making improvements to our apps so be sure to check back in the app stores for any updates.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Roku app redirect/closes to the home screen. What do I do?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            Please make sure you have the most updated version of the app. Try a system update and restart.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        The Roku app does not appear to be loading. What do I do?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            This may be a result of connection and/or processing speeds that will sometimes be faster or slower than other times. If after 30 seconds or so the app does not respond, then you may need to close the app and try again. Please also make sure your have the most updated app - perform a system update and restart.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Why can I not log into the app while I can on the website?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            If you are able to log in to the website but not the apps, then please ensure you are typing you credentials exactly the same as you do on the website. If you are still not able to get access then please contact support as there may be a processing issue we have not yet discovered.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom js-drawer">
+                    <h3 class="js-drawer-heading">
+                        Can I join using the app?
+                    </h3>
+                    <div class="js-drawer-content">
+                        <p>
+                            At this time you can only establish an account using the website through your web browser, or through our Roku app.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            
+        </div>
+    </div>
+</div>
+
+        
+
+        
+
+    </div>
+</div>
+
+                
+
+
+            </div>
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div class="clear clearfix display-block paint-accent-2">
+<div class="block paint-accent-dark-p5 clearfix clear">
+    <p class="display-block padding-bottom text-center">
+       
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        View our <a href="/sitemap.ktv" class="lg-t-p underline">site map</a>.
+    </p>
+    <p class="color-light-grey size-xsmall">
+        
+        &copy; 2024 OAN Live, an Herring Networks Company.
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        Use of the OAN Live service constitutes an acceptance of the service's <a href="/terms.ktv" class="lg-t-p underline">terms</a> and <a href="/privacy.ktv" class="lg-t-p underline">privacy</a>.
+    </p>
+    <dl class="display-block text-right">
+        <dt class="padding-bottom-half color-light-grey">
+            Questions? Comments?
+        </dt>
+        <dd>
+            <a href="/support/faq.ktv" class="display-inline-block button-ghost-light">FAQ</a>
+            <a href="/support/contact.ktv" class="display-inline-block button-ghost-light">Contact Us</a>
+        </dd>
+    </dl>
+</div>
+</div>
+
+            
+
+
+        </div>
+
+
+        
+        
+        
+
+
+
+        <div id="marketing-ad">
+
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/plugins-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/response.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/elixer-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/slick-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/base-min.js"></script>
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="/herring/js/PROD/analytics-min.js" ></script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFMDCPL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+        
+        
+        
+            
+                <script type="text/javascript" src="/herring/js/PROD/freshdesk-min.js" ></script>
+            
+        
+        
+        
+
+    </body>
+</html>

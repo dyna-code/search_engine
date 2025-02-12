@@ -1,0 +1,676 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+
+    
+    
+
+    
+    
+
+    <HEAD>
+
+        
+        <link rel="icon" type="image/png" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/favicon.ico" />
+
+        
+        
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="/herring/css/rcss/base.css" type="text/css" />
+
+
+<link rel="stylesheet" media="all" href="/herring/css/fonts/iconFonts.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.min.css" />
+<link rel="stylesheet" href="/herring/css/slick.css" type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+<script type="text/javascript" src="/herring/js/PROD/modernizr.custom.17405.js" ></script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+
+
+
+<script type="text/javascript" src="/dwr/engine.js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="text/javascript" src="/dwr/interface/AJAXBEE.js"></script>
+<script type="text/javascript" src="/dwr/interface/AJAXSESS.js"></script>
+<script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.12/dist/sweetalert2.all.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0FNFZQF1X"></script>
+<script src="/herring/js/PROD/analyticsv2-min.js"></script>
+
+<!-- OpenBook -->
+<script src="https://stream.aidemsrv.com/lib/stream.js" data-key="clnabfeym018j08mgcv8zfkrd" data-init-only="false" defer></script>
+<script>
+  window.aidemstream = window.aidemstream || (function(){(window.aidemstreamQ = window.aidemstreamQ || []).push(arguments);})
+</script>
+
+
+<script type="text/javascript">
+
+
+
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"enableCcpa":true,"countryDetection":true,"ccpaAcknowledgeOnDisplay":false,"whitelabel":false,"enableGdpr": true,"gdprAppliesGlobally":false,"lang":"en","siteId":2150021,"cookiePolicyId":14516423, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#ee9b25","acceptButtonCaptionColor":"white","customizeButtonColor":"#212121","customizeButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","position":"float-bottom-center","textColor":"white","backgroundColor":"#000001" },
+        "callback" : {
+            "onConsentFirstGiven": function(consent){
+                var now = new Date();
+                var time = now.getTime();
+                var days = 365;
+                var expireTime = time +(days*1000*24*60*60);
+                now.setTime(expireTime);
+                document.cookie = 'kconsentaccepteddate=' + time +';expires='+now.toUTCString()+';path=/';
+            }
+        }
+    };
+</script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+<script>
+
+
+jwplayer.key="xj1hV5VsEvDGah84oQxgewtJ/m0RJdKiOQTKFa5GdB8=";
+</script>
+
+<script type="text/javascript">
+    function onSubmitSignup(token){
+        //document.getElementById("formEmailCredentials").submit();
+        document.getElementById("formAccountCreate").submit();
+        console.log(token);
+    }
+
+    function onSubmitLogin(token){
+        document.getElementById("formLogIn").submit();
+        console.log(token);
+    }
+
+
+    function paymentSubmit(){
+        var $forms = $('form#formPayment');
+        $forms.off("submit.submitting");
+        $forms.removeClass("submitting");
+
+        // Reset buttons
+        var $formButtons = $forms.find("button");
+        if($formButtons.length > 0) {
+            $formButtons.removeAttr("disabled");
+            $formButtons.remove("span.submitting");
+        }
+
+        // Set submit function --- to show user something is happening on submit
+        $forms.on("submit.submitting", function(e){
+
+            var className = "submitting";
+            var $thisForm = $(this);
+
+            // do not submit again if form is already submitting
+            if($thisForm.hasClass(className)) {
+
+                return false;
+            }
+            else {
+
+                var $buttons = $thisForm.find("button");
+                if($buttons.length > 0) {
+                    $buttons.attr("disabled", "disabled");//&#x2601;
+                    $buttons.prepend("<span class='submitting'><i class='icon-cloud'></i></span>");
+                }
+
+                $thisForm.addClass(className);
+
+                return true;
+            }
+        });
+
+
+
+
+        document.getElementById("formPayment").submit();
+        console.log("Testing");
+    }
+
+
+
+
+
+
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7DFL67');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFMDCPL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '990276938526275');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=990276938526275&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<title>Privacy | OAN Live</title>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logo/apple-icon-logo.png" />
+
+    </HEAD>
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+	
+	
+	
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    <body  class="" data-responsejs='{"create": [{"prop":"width","prefix":"r","breakpoints":[0, 320, 480, 560, 672, 768, 864, 960, 1024, 1200, 1440]}]}' data-ktv="" data-eip="true" >
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        
+        
+        
+
+
+
+
+        
+        
+        
+
+
+
+
+        <div id="container-page">
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div id="header-container" class="clear clearfix relief">
+    <div class="container-section">
+        <div id="head-home" class="float-left">
+            <div class="display-flex align-center">
+                <button class="display-inline-block hamburger js-hamburger" type="menu" title="Menu" data-hamburger-movecontent="y" data-hamburger-of="hamburger-menu-main">
+                    <span class="icon uppercase display-block size-smallest">Menu</span>
+                </button>
+                <a href="/home.ktv" class="display-inline-block size-large "><img src="//oanlivestorage.s3.us-west-1.amazonaws.com/stage/herring/images/base/logos/OAN-Live-logo.svg" alt="Oan Live Home" height="50"  class="display-inline-block" /><!--
+                    --></a>
+
+                
+                
+                    
+                
+                
+            </div>
+        </div>
+        <div id="head-sub" class="float-right is-hiddenb-pre-ml">
+            
+                
+                
+
+                    
+                    
+                        
+                           
+                        
+                        
+                    
+
+                    
+                    
+                        <a href="/join/credentials/email.ktv?" class=" display-inline-block size-large box-g-t-a" data-mp='{"page":"#body #create-account-stepone-container"}' >
+                            <span class="display-inline-block size-medium">Join</span>
+                        </a>
+                    
+
+                    
+                    
+                        <a href="/login.ktv" class="display-inline-block size-large box-g-t-a"><span class="display-inline-block size-medium">Log in</span></a>
+                    
+                    <a href="/join/signup.ktv" id="join-button" class="is-hiddenid-pre-s display-inline-block button-cta"  data-mp='{"page":"#body #create-account-stepone-container"}' >
+                        <span class="display-inline-block size-medium">Sign Up For OAN Live</span>
+                    </a>
+
+                
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="hamburger-menu-main" class="clearfix clear paint-white relief hamburger-menu-left">
+    <ul>
+        
+        <li>
+            <a href="/home.ktv" class="box-w-t-a display-block width-max">OAN Live</a>
+        </li>
+        
+            
+            
+                <li>
+                    <a href="/join/credentials/email.ktv?" data-mp='{"page":"#body #create-account-stepone-container"}' class=" box-w-t-a display-block width-max" >Join</a>
+                </li>
+                <li>
+                    <a href="/login.ktv" class="box-w-t-a display-block width-max">Log in</a>
+                </li>
+            
+        
+        <li>
+            
+        </li>
+        <li>
+           
+        </li>
+        <li>
+            <a href="/support/faq.ktv" class="box-w-t-a display-block width-max">FAQ & Support</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+            
+
+
+            <div id="container-body" >
+
+
+                
+                
+                
+                    
+
+
+
+
+
+
+
+<div class="block paint-light-grey clearfix clear" >
+    <div class="content">
+        <h1>OAN Live Privacy</h1>
+        <div class="block reliefit paint-white">
+            <p class="margin-bottom">
+                OAN Live respects your preferences concerning the collection and use of personally identifiable information. This statement discloses the privacy practices for the OAN Live.com website. As part of the normal operation of this site, we may collect and, in some cases, may disclose information about you. This Privacy Policy describes the information we collect about you and how we may use or share that information. Use of OAN Live is an explicit agreement to the policy disclosed.
+            </p>
+            <h3>
+                Registration Information
+            </h3>
+            <p class="margin-bottom">
+                We may ask for specific Personally Identifiable Information about you when you register and create an account with OAN Live. We require that you provide user, contact and billing information, and we may ask for system information, information about your interests, preferences and future needs so that we can provide and improve our services.
+            </p>
+
+            <h3>
+                Information Collected From or About You
+            </h3>
+            <div class="margin-bottom">
+                Typically, we will collect the following information from or about you and your activities while you utilize the OAN Live Service:
+                <ol class="numbered-list padding-left">
+                    <li>
+                        Information you provide, including but not limited to (name, email address, address, credit card type, and the last four digits of your card)
+                    </li>
+                    <li>
+                        Information automatically collected when you use the OAN Live Service (location, site activities, and other information via tracking, cookies, web beacons, or other technologies)
+                    </li>
+                </ol>
+            </div>
+
+            <h3>
+                Newsletter Subscription Information
+            </h3>
+            <p class="margin-bottom">
+                From time to time we provide information to our customers in the form of electronic and/or print newsletters. When you subscribe to OAN Live you will be added to our mailing list and will receive announcements and information about OAN Live. The announcements and information will come from OAN Live, not from third parties. All announcements will be sent to the email or physical address you provide while registering. You may opt out of these notices at any time by following the instruction provided at the bottom on the email notices. You can also request to stop receiving print notices or announcements by emailing support@oann.com.
+            </p>
+            
+            <h3>
+                Links
+            </h3>
+            <p class="margin-bottom">
+                live.oann.com may contain links to third party sites or services. This Privacy Policy applies to the live.oann.com site only. Any information you submit to linked sites will be subject to the privacy policies of those sites, if any. OAN Live has no control over any third party site and users should review those privacy policies carefully.
+            </p>
+
+            <h3>
+                Legal Disclosures
+            </h3>
+            <p class="margin-bottom">
+                OAN Live may disclose Personally Identifiable Information if required to do so by law or in good-faith belief that such action is necessary to prevent injury or property damage. We will usually attempt to notify you when we are making such a disclosure, but we may not do so in an emergency or when we are prohibited by law or court order from giving such notice.
+            </p>
+
+            <h3>
+                Passwords
+            </h3>
+            <p class="margin-bottom">
+                Always select a password that is unlikely to be available or discovered by others, never disclose your password to any third parties. If you lose control of your password, you may lose substantial control over your Personally Identifiable Information and may be subject to legally binding actions taken or made on your behalf. No OAN Live support member will ever request your password. If you receive a request for your password from any person or company you should contact OAN Live immediately at support@oann.com. If your password has been compromised for any reason, you should immediately change your password.
+            </p>
+
+            <h3>
+                Opt-Out Policy
+            </h3>
+            <p class="margin-bottom">
+                OAN Live allows you to opt out of any marketing or promotional mailings by unsubscribing, following the links at the bottom of any email marketing or by emailing support@oann.com.
+            </p>
+
+            <h3>
+                Security
+            </h3>
+            <p class="margin-bottom">
+                OAN Live uses state-of-the-art commercially available technology to protect against unauthorized access to any Personally Identifiable Information that is stored electronically by OAN Live. OAN Live does not store any sensitive payment information. All sensitive payment information is stored by our payment processor. Regrettably, no security measures can guarantee 100% security. Accordingly, OAN Live cannot guarantee the complete security of your information and cannot assume liability for the improper or unauthorized access to it. By using the OAN Live service, or providing information to us through email, you agree that we can communicate with you electronically pertaining to matters of privacy, security, administrative, and account issues as they relate your account with OAN Live. All users are encouraged to change their password on a bi-weekly basis, to never save their username and password on a shared or public computer or device, and to delete all account information from any device before they sell it.
+            </p>
+
+            <h3>
+                Children
+            </h3>
+            <p class="margin-bottom">
+                You must be 18 years of age in order to subscribe to the OAN Live service. In certain jurisdictions the age of majority may exceed 18 years of age, in which case, you must satisfy that jurisdictions age to become a member. Individuals under the age of 18 may use the service, but they may only do so with the approval, supervision, or involvement of a parent or legal guardian, and any such use will be subject to the OAN Live Terms of Use.
+            </p>
+
+            <h3>
+                Privacy Policy Changes
+            </h3>
+            <p class="margin-bottom">
+                If we decide to change this privacy policy, we will post these changes here so that you will always know what information we gather, how we might use it and whether we will disclose it to anyone. OAN Live reserves the right to change this policy at any time without notice. Unless you opt out of receiving email notifications from us, we may also notify users by email of any significant changes to this policy.
+            </p>
+
+            <h3>
+                Email
+            </h3>
+            <p class="margin-bottom">
+                OAN Live has email links on its site to allow you to contact us directly. The information you provide is used to respond directly to your questions or comments. We may also store your comments to improve the site and our service, or review and discard the information.
+            </p>
+
+            <h3>
+                Automated Data Capture, Cookies
+            </h3>
+            <p class="margin-bottom">
+                OAN Live may automatically track certain information about your use of this site. OAN Live logs IP addresses, browser types, user location, page viewing information and other behavior while using our service. This information may be analyzed to constantly improve the value of the materials and services available on the web site. We may also collect information about your use of the website or through email marketing gathered through cookies or other technologies. Cookies are pieces of information that are stored on your computer's hard disk. They make our site more useful by storing information about your preferences and settings.
+            </p>
+
+            <h3>
+                Third Party Information
+            </h3>
+            <p class="margin-bottom">
+                We may, on occasion, use information provided to us by third parties, such as opt-in lists where you have requested information about OAN Live or its products or services while visiting third-party websites, or other venues.
+            </p>
+
+            <h3>
+                Use by OAN Live
+            </h3>
+            <p class="margin-bottom">
+                OAN Live will use your Personally Identifiable Information so that OAN Live and OAN Live representatives can engage in and process your transactions and provide services to you, such as product upgrades, special offers, updated information, new services, and other OAN Live related information. "Representatives" include value-added resellers. OAN Live does not engage in, offer, or allow the selling of, any user provided information to third parties including email addresses.
+            </p>
+
+            <p class="margin-bottom">
+                OAN Live also uses Personally Identifiable Information to improve our marketing and promotional efforts, to analyze site usage, to improve our site and service offers, and to customize our site. We may use Personally Identifiable Information to deliver information to you and to contact you regarding your account or administrative notices. OAN Live may also use Personally Identifiable Information to resolve disputes, troubleshoot problems and enforce our agreements with you, including our Terms of Service Policy and Privacy Policy. This may include sharing your Personally Identifiable Information with third parties who are directly involved with the resolution and enforcement of such policies.
+            </p>
+
+            <h3>
+                Use by Third Parties
+            </h3>
+            <p class="margin-bottom">
+                OAN Live may share your Personally Identifiable Information with third parties to assist OAN Live with responding to sales requests, taking your orders, processing your payment, troubleshooting, resolving disputes, or any other matter directly relating to creating, maintaining or closing your account. OAN Live may also share your Personally Identifiable Information with third parties that sponsor OAN Live events or conferences that you attend, and when you give your consent. We may also share information to comply with legal requirements.
+            </p>
+        </div>
+    </div>
+</div>
+
+                
+
+
+            </div>
+
+
+            
+            
+            
+                
+
+
+
+
+
+
+
+
+
+<div class="clear clearfix display-block paint-accent-2">
+<div class="block paint-accent-dark-p5 clearfix clear">
+    <p class="display-block padding-bottom text-center">
+       
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        View our <a href="/sitemap.ktv" class="lg-t-p underline">site map</a>.
+    </p>
+    <p class="color-light-grey size-xsmall">
+        
+        &copy; 2024 OAN Live, an Herring Networks Company.
+    </p>
+    <p class="color-light-grey size-xsmall padding-bottom-half">
+        Use of the OAN Live service constitutes an acceptance of the service's <a href="/terms.ktv" class="lg-t-p underline">terms</a> and <a href="/privacy.ktv" class="lg-t-p underline">privacy</a>.
+    </p>
+    <dl class="display-block text-right">
+        <dt class="padding-bottom-half color-light-grey">
+            Questions? Comments?
+        </dt>
+        <dd>
+            <a href="/support/faq.ktv" class="display-inline-block button-ghost-light">FAQ</a>
+            <a href="/support/contact.ktv" class="display-inline-block button-ghost-light">Contact Us</a>
+        </dd>
+    </dl>
+</div>
+</div>
+
+            
+
+
+        </div>
+
+
+        
+        
+        
+
+
+
+        <div id="marketing-ad">
+
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/plugins-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/response.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/elixer-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/slick-min.js"></script>
+        <script type="text/javascript" src="/herring/js/PROD/base-min.js"></script>
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="/herring/js/PROD/analytics-min.js" ></script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DFL67"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFMDCPL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+        
+        
+        
+        
+        
+
+    </body>
+</html>
